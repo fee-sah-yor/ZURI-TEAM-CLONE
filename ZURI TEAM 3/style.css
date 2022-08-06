@@ -34,6 +34,10 @@ a{
     text-decoration: none;
 }
 
+hr{
+    display:none;
+}
+
 body{
     width:100%;
     margin:0 auto;
@@ -100,7 +104,7 @@ header {
     justify-content: space-between;
     gap: 2rem;
     margin: 4rem 4rem 0;
-    padding: 9rem 3rem 0 !important;
+    padding: 9rem 3rem 0;
     font-family: inherit;
 }
 
@@ -397,6 +401,7 @@ article .people img {
 .quali .s-card{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     gap:15px;
     margin: 1rem 5rem 3rem;
@@ -482,7 +487,11 @@ footer .bottom{
     header .trusted{
         text-align: center;
         width:100%;
-        margin-right:-10rem;
+    }
+
+    header .trusted p{
+        padding:0;
+        margin-right:0;
     }
 
     .trusted .line {
@@ -511,27 +520,215 @@ footer .bottom{
         width:300px;
     }
 
-    .acheivements{
-        width:100%
+    .acheivements .skills h2{
+        padding:0;
+        text-align: center;
+        width:100%;
     }
 
-    .acheivements .work ul{
-     width:100%;
+    .skills ul{
+        padding-left: 60px;
+    }
+
+    .work ul{
+     padding:0 10px;
     }
 
     .acheivements .line2{
         display: none;
     }
+    
 }
 
 @media screen and (max-width: 768px) {
-
+    body{
+        margin:0;
+        padding:0;
+    }
+    nav ul li a{
+        display:none;
+    }
     header .trusted{
-        width:50%;
+        align-items: center;
+    }
+    header .trusted p{
+        padding:0;
+        margin-right:0;
     }
 
-    header .maleface{
-        width:50%
+    header .maleface img{
+        width:150%;
+        align-self: center;
+    }
+
+    .maleface .line2{
+       display:none;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    article .impact{
+        width: 100%;
+        text-align: center;
     }
     
+    article .impact .countries{
+        justify-content: center;
+    }
+    
+    article .people {
+        width: 100%;
+        justify-content: center;
+        margin-top:2rem;
+    }
+    article .people img{
+        width: 80%;
+    }
+
+    .acheivements{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+    }
+    .acheivements .skills h2{
+        padding:0;
+        text-align: center;
+        width:100%;
+    } 
+    .acheivements .skills ul{
+       display: grid;
+       grid-template-columns: repeat(3,250px);
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       margin:0 0 1rem 0;
+       padding:0;
+       gap:10px;
+    }
+
+    .acheivements .work h2{
+        padding:0;
+        text-align: center;
+        width:100%;
+    } 
+    .acheivements .work ul{
+       display: grid;
+       grid-template-columns: repeat(3,250px);
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       margin:0 0 1rem 0;
+       padding:0;
+       gap:10px;
+    }
+
+    .quali .q-cards,
+    .quali .s-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-card .cardtwo{
+        width:100%;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+    nav{
+       padding:1rem;
+    }
+
+    nav ul{
+        gap:0;
+    }
+
+    header{
+        padding:3rem 0;
+    }
+
+    header .trusted .talents{
+        display: flex;
+    }
+
+    header .maleface img{
+        width:300px;
+    }
+
+    article {
+        padding:2rem 0;
+    }
+    
+    article .impact{
+        text-align: left;
+    }
+
+    article .impact h2,
+    article .impact h2 span{
+        font-size:24px;
+    }
+
+    article .impact h3,
+    article .impact p{
+        font-size: 16px;   
+     }
+
+     .impact .countries img{
+        width: 60px;
+     }
+
+     article .people img{
+        width:100%;
+     }
+    .acheivements .skills ul{
+        display: grid;
+        grid-template-columns: repeat(2,180px);
+     }
+
+     .acheivements .work ul{
+        display: grid;
+        grid-template-columns: repeat(2,180px);
+     }
+
+     .quali .q-cards,
+     .quali .s-card{
+        margin:2rem 2rem;
+        padding:0;
+     }
+
+     footer{
+        padding:4rem 1rem 0;
+     }
+
+     footer .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+     }
+
+
+     footer .bottom{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+     }
+
+     footer .bottom a{
+        margin-bottom:2rem;
+     }
+     footer .bottom hr{
+        display:block;
+        width:100%;
+     }
+
+     footer .bottom p{
+        margin-top: 1rem;
+     }
 }
