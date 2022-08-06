@@ -1,0 +1,385 @@
+@font-face {
+    font-family: Averta;
+    src: url(https://res.cloudinary.com/dafsch2zs/raw/upload/v1596618987/Zuri%20Landing/AvertaDemoPECuttedDemo-Regular_dghpn7.otf);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Averta, sans-serif;
+}
+
+html {
+    min-width: 375px;
+    max-width: 1440px;
+}
+
+:root {
+    --white: #ffffff;
+    --red: #e7332b;
+    --grey: #514949;
+    --pale-pink: #fffafa;
+}
+
+body {
+    text-align: center;
+    height: 100vh;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #e7332b;
+}
+
+/* -------------------------HEADER SECTION-------------------- */
+
+header {
+    background: url(./L-images/hero-bg.svg) no-repeat center;
+    height: 800px;
+}
+
+header .zt-logo {
+    padding-top: 4.2rem;
+    padding-bottom: 50px;
+}
+
+.about {
+    padding: 1.9rem;
+}
+
+.about h2 {
+    color: #514949;
+    font-size: 32px;
+    margin-bottom: 26px;
+}
+
+.about p {
+    color: #514949;
+    line-height: 1.5rem;
+    margin-bottom: 5rem;
+    padding-top: 1rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.pages .industry {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    color: var(--white);
+    padding: 13px 23px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.pages .industry:hover {
+    color: var(--red);
+    border-color: var(--red);
+    background-color: var(--white);
+}
+
+.pages .experience {
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 13px 23px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.pages .experience:hover {
+    color: var(--white);
+    border-color: var(--red);
+    background-color: var(--red);
+}
+
+/* ------------------MAIN BODY------------------ */
+main {
+    background-color: var(--white);
+}
+
+main h3 {
+    margin-top: 9rem;
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+main .function {
+    color: var(--grey);
+    font-size: 24px;
+    line-height: 2.5rem;
+}
+
+main .zuri-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.7rem;
+    margin: 4rem 7rem 0;
+    text-align: left;
+    padding-bottom: 5rem;
+}
+
+.zuri-cards .train,
+.zuri-cards .intern,
+.zuri-cards .talent {
+    background-color: var(--pale-pink);
+    padding: 2rem;
+    height: 500px;
+}
+
+.zuri-cards .train img,
+.zuri-cards .intern img,
+.zuri-cards .talent img {
+    margin-top: 2rem;
+}
+
+.zuri-cards .train p,
+.zuri-cards .intern p,
+.zuri-cards .talent p {
+    line-height: 1.5rem;
+    padding: 2.5rem 0 2rem 0;
+    color: var(--grey);
+    opacity: 0.9;
+}
+
+.zuri-cards .train {
+    position: relative;
+}
+
+.zuri-cards .train .img-left {
+    position: absolute;
+    width: 90%;
+    top: -19%;
+    left: -30%;
+    z-index: -1;
+}
+
+.zuri-cards .talent {
+    position: relative;
+}
+
+.zuri-cards .talent .img-right {
+    position: absolute;
+    width: 90%;
+    top: -19%;
+    right: -30%;
+    z-index: -1;
+}
+
+/* -----------------------FOOTER SECTION----------------- */
+footer {
+    margin: auto 7rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 9rem 0 5rem 0;
+    text-align: left;
+}
+
+.footer .zt-logo2 {
+    margin-bottom: 5.7rem;
+}
+
+.footer h3 {
+    color: var(--grey);
+    font-size: 16px;
+}
+
+.footer .links {
+    line-height: 2rem;
+    margin-bottom:2rem;
+}
+
+.footer .contact p {
+    font-size: 14px;
+    color: var(--grey);
+    margin: 9px 0 1rem;
+}
+
+.footer .follow {
+    margin-bottom:3.8rem;
+}
+
+.footer .follow .sm-logos {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer .follow .sm-logos img {
+    width: 18px;
+}
+
+.separator hr{
+    color: var(--grey);
+    opacity:0.6;
+}
+
+.copyright p {
+    font-weight: 700;
+    color: var(--grey);
+    margin-top: 2rem;
+    padding-bottom: 8rem;
+}
+
+/* ------------------------MEDIA QUERIES-------------------- */
+
+@media (max-width:768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width:100%;
+    }
+
+    /* ==========HEADER-======= */
+    header {
+        width: 100%;
+    }
+
+    header .zt-logo {
+        padding-top: 7rem;
+        padding-bottom: 50px;
+    }
+
+    .pages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ==========MAIN BODY======= */
+    main .zuri-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 2rem;
+        padding: auto;
+    }
+
+    .zuri-cards .talent .img-right {
+        display: none;
+    }
+
+    main .zuri-cards {
+        padding-bottom: 1rem;
+    }
+
+    /* ===========FOOTER-=========== */
+    footer{
+        width:100%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+
+    footer .zt-logo2 img{
+        width: 150px;
+    }
+
+    .footer .follow .sm-logos {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer .follow .sm-logos img {
+        width: 18px;
+    }
+    
+    .separator{
+        margin:0 1rem;
+    }
+}
+
+@media (max-width:425px) {
+    body{
+        width:100%;
+    }
+    
+    /* =============HEADER=========== */
+    header {
+        width: 100%;
+    }
+
+    br{
+        display:none;
+    }
+
+    .pages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pages .industry {
+        margin-bottom: 20px;
+    }
+
+    /* ===================MAIN BODY========== */
+    .zuri-cards .train img,
+    .zuri-cards .intern img,
+    .zuri-cards .talent img {
+        margin-top: 2rem;
+    }
+    
+    .zuri-cards .train p,
+    .zuri-cards .intern p,
+    .zuri-cards .talent p {
+        font-size:16px;
+        /* line-height: 1.5rem;
+        padding: 2.5rem 0 2rem 0;
+        color: var(--grey);
+        opacity: 0.9; */
+    }
+    
+
+    /* ============FOOTER============ */
+    .footer {
+        text-align: center;
+    }
+
+    footer .zt-logo2 img{
+        width: 150px;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+
+    .footer .links {
+        line-height: 2rem;
+    }
+    
+    .footer .contact p {
+        font-size: 16px;
+    }
+    
+    .footer .follow .sm-logos img {
+        width: 20px;
+    }
+}
